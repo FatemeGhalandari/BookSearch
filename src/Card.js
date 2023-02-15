@@ -1,16 +1,19 @@
 import { React } from 'react'
-const Card = () => {
+import b1 from './b2.jpg'
+const Card = (bookData) => {
     return (
         <>
-            <div className="card">
-                <img src="./b2.jpg" alt="" />
-                <div className="bottom">
-                    <h3 className="title">
-                        In Search of Lost Time
-                    </h3>
-                    <p className="amount">$18.87</p>
-                </div>
-            </div>
+            {bookData.items.map((item) => {
+                return (
+                    <div className="card">
+                        <img src={b1} alt="" />
+                        <div className="bottom">
+                            <h3 className="title">In Search of Lost Time</h3>
+                            <p className="amount">$18.87</p>
+                        </div>
+                    </div>
+                )
+            })}
         </>
     )
 }

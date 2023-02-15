@@ -79,14 +79,14 @@ body{
 }
 .container{
     display: grid;
-    grid-template-columns: repeat(4,minmax(200px,0.5fr));
+    grid-template-columns: repeat(auto-fit,minmax(200px,0.5fr));
     grid-gap: 20px;
-    width: 50px;
     margin-top: 25px;
     box-sizing: border-box;
+    margin-left: 15px;
 }
 .card{
-    margin-bottom: 10px;
+    width: 200px;
     background-color:var(--secondary-color);
     padding: 0.5rem;
     border-radius: 1rem;
@@ -95,6 +95,8 @@ body{
     transition: .5s;
     box-shadow: 0 5px 5px rgba(212,185,150,.5);
     margin-left: 5px;
+    margin: 0 auto;
+    margin-bottom: 10px;
 }
 .card img{
     width: 100%;
@@ -107,5 +109,15 @@ body{
 }
 .card .bottom .title{
     font-size: 14px;
-    margin-bottom: 32px;
+    margin-bottom: 35px;
+}
+.card .bottom .amount{ 
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+    right: 10px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 13px;
+    font-weight: bold;
 }
