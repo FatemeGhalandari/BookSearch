@@ -1,5 +1,8 @@
-import { React } from 'react'
+import { React, useState } from 'react'
+import PopUp from './PopUp'
 const Card = ({ bookData }) => {
+    const [show,setShow]=useState(false);
+    const [bookItem,setItem]=useState();
     console.log(bookData)
     return(
         bookData.map((item) => {
@@ -9,13 +12,14 @@ const Card = ({ bookData }) => {
             if (book_img != undefined && book_price!= undefined) {
                 return (
                     <>
-                        <div className="card" key={item.id}>
+                        <div className="card" key={item.id} onClick={() => { setShow(true); setItem(item) }}>
                             <img src={book_img} alt="" />
                             <div className="bottom">
                                 <h3 className="title">{book_title}</h3>
                                 <p className="amount">$ {book_price}</p>
                             </div>
                         </div>
+                        <PopUp show={show} item={bookItem} onClose={()=>setShow(false)}/>
                     </>
                 )
             }
