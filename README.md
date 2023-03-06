@@ -1,5 +1,9 @@
 # Project Name: google-book-react 
 This is a web application built using ReactJS that allows users to search for books and find a brief information about it. The website uses the Google Books API to fetch book data and display it.
+
+![Screenshot (2021)](https://user-images.githubusercontent.com/121693146/223189659-d9a3f54e-4903-4ed6-b4c3-0cd038cfdee7.png)
+![Screenshot (2022)](https://user-images.githubusercontent.com/121693146/223190240-4d1fc3a8-2701-4792-ae81-f6d0c4a095e0.png)
+
 ## Features
 • Search for books by title, author, or keyword  
 • View book details such as title, author, description, and cover image 
